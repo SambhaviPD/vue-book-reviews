@@ -10,7 +10,7 @@ const apiClient = axios.create({
 })
 
 export default{
-    getReviews() {
-        return apiClient.get('/reviews')
+    getReviews(perPage, page) {
+        return apiClient.get('/reviews?_limit=' + perPage + '&_page=' + page)
     },
 }
